@@ -1,0 +1,3 @@
+.input-otp .rt-TextFieldInput {
+  @apply indent-1.5 justify-center;
+}
