@@ -152,7 +152,6 @@ const config = {
     '@stylistic/operator-linebreak': 'off',
     '@stylistic/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
     '@stylistic/jsx-indent-props': ['error', 2],
-    '@stylistic/jsx-newline': ['error', { prevent: false }],
 
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
