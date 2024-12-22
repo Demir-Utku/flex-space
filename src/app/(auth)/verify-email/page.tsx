@@ -19,7 +19,7 @@ export default async function VerifyEmailPage() {
   }
 
   return (
-    <Card className="mx-auto w-full max-w-md">
+    <Card className="mx-auto w-full max-w-md p-8">
       <Heading>Verify your email</Heading>
 
       <Text>

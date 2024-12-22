@@ -3,7 +3,7 @@
 import { useEffect } from 'react'
 import { useFormState } from 'react-dom'
 
-import { Button } from '@radix-ui/themes'
+import { Button, Flex } from '@radix-ui/themes'
 import { toast } from 'sonner'
 
 import { Text } from '@/components/ui/text'
@@ -39,15 +39,15 @@ export default function VerifyCode() {
 
   return (
     <div className="flex flex-col gap-2">
-      <VerificationInput codeLength={8} onVerify={onSubmit} onResendCode={resendAction} />
+      <VerificationInput onVerify={onSubmit} onResendCode={resendAction} />
 
-      <Text as="div" align="center" color="gray">
-        Want to use a different email?{' '}
+      <Flex align="center" justify="center" gap="4">
+        <Text color="gray"> Want to use a different email?</Text>
 
-        <Button variant="ghost" size="2" onClick={logout}>
+        <Button variant="ghost" size="3" className='!p-1.5' onClick={logout}>
           Logout
         </Button>
-      </Text>
+      </Flex>
     </div>
   )
 }

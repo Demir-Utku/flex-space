@@ -11,7 +11,7 @@ export function VerificationInput({
   onVerify,
   onResendCode
 }: {
-  codeLength: number
+  codeLength?: number
   onVerify: (code: string) => void
   onResendCode: () => void
 }) {
@@ -41,9 +41,9 @@ export function VerificationInput({
 
   return (
     <Flex direction="column" mt="6" gap="5">
-      <div className="input-otp mx-auto flex w-full items-center justify-between">
+      <div className="input-otp flex w-full items-center justify-between">
         {code.map((value, index) => (
-          <div key={index} className="h-16 w-16">
+          <div key={index} className="h-14 w-14">
             <TextField.Root
               ref={el => {
                 if (el) {
@@ -51,7 +51,7 @@ export function VerificationInput({
                 }
               }}
               value={value}
-              className="!h-16 !w-16 text-center outline-none"
+              className="!h-14 !w-14 text-center outline-none"
               maxLength={1}
               type="number"
               size="3"
